@@ -31,15 +31,11 @@ def process_fun():
 
 if __name__ == "__main__":
     try:
-
         signal.signal(signal.SIGINT,quit)
         signal.signal(signal.SIGTERM,quit)
         p = threading.Thread(target = process_fun)
         p.setDaemon(True)
         p.start()
         runShell()
-
     except Exception as e:
         pass
-
-
